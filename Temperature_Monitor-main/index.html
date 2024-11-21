@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Monitor</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // ฟังก์ชันดึงข้อมูลอุณหภูมิจาก API
+    function fetchTemperature() {
+      const apiUrl = 'http://20.6.129.130:3001/getTemperature'; // เปลี่ยนเป็น URL ของ API จริง
+
+      fetch(apiUrl)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          // อัปเดตค่าอุณหภูมิในหน้าเว็บ
+          document.getElementById('temperature-value').innerText = data.temperature + '°C';
+        })
+        .catch(error => {
+          console.error('Error fetching temperature:', error);
+          document.getElementById('temperature-value').innerText = 'Error!';
+        });
+    }
+
+    // โหลดค่าอุณหภูมิครั้งแรกเมื่อเปิดหน้าเว็บ
+    window.onload = fetchTemperature;
+  </script>
+</head>
+
+<body>
+  <div class="left-Container"></div>
+  <div class="index-Container">
+    <img src="woman holding something.png" alt="Woman" class="floatImgWomanIndex">
+
+    <div class="floatImgAll">
+      <img src="partly cloudy day.png" alt="Partly Cloudy">
+      <img src="storm.png" alt="Storm">
+      <img src="moon with cloud.png" alt="Moon with Cloud">
+      <img src="snow.png" alt="Snow">
+    </div>
+
+    <!-- แสดงค่าอุณหภูมิ -->
+    <h3 id="temperature-value">Loading...</h3>
+
+    <!-- ปุ่มรีเฟรชค่าอุณหภูมิ -->
+    <button onclick="fetchTemperature()">Refresh Temperature</button>
+  </div>
+</body>
+
+</html>
