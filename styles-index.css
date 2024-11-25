@@ -1,0 +1,59 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a background color and font style */
+body {
+    background: #001f3f;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Center the container */
+.container {
+    background-color: #ead8b1;
+    padding: 100px;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 800px;
+    max-width: 100%;
+}
+
+/* Styling the h1 */
+h1 {
+    font-size: 45px;
+    color: #434855;
+    margin-bottom: 20px;
+}
+
+/* Styling the temperature value */
+#temperature {
+    font-size: 32px;
+    font-weight: bold;
+    color: #434855;
+}
+
+/* Styling the button */
+button {
+    background-color: #3a6d8c;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #6a9ab0;
+}
