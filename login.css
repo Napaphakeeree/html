@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #001f3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .floatImgCloud {
+    float: left;
+    width: 150px;
+    height: 100px;
+    margin-top: -80px;
+    margin-left: 80px;
+    position: relative;
+  }
+  .floatImgWoman {
+    float: left;
+    width: 150px;
+    height: 250px;
+    margin-top: 20px;
+    margin-left: -260px;
+    position: relative;
+    z-index: 10;
+  }
+  .left-container {
+    background: #3a6d8c;
+    border-radius: 50px;
+    height: 350px;
+    width: 100px;
+    position: relative;
+    right: 350px;
+    z-index: 10;
+  }
+  .login-container {
+    background: #ead8b1;
+    border-radius: 50px;
+    height: 400px;
+    width: 700px;
+    position: absolute;
+  }
+  .login-container h1 {
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: -10px;
+    margin-left: 350px;
+  }
+  .login-container h2 {
+    color: #6a9ab0;
+    font-size: 20px;
+    margin-bottom: 0px;
+    margin-left: 100px;
+    text-align: center;
+  }
+  .login-container label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .login-container input {
+    width: 300px;
+    height: 50px;
+    margin-bottom: 15px;
+    border: 1px;
+    background-color: #6a9ab0;
+    border-radius: 20px;
+    margin-left: 250px;
+    text-indent: 20px;
+  }
+  input::placeholder {
+    color: white;
+    font-weight: bold;
+  }
+  .login-container button {
+    width: 150px;
+    height: 40px;
+    background-color: #6a9ab0;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 320px;
+    font-weight: bold;
+  }
+  .login-container button:hover {
+    background-color: #3a6d8c;
+  }
+  .login-container p {
+    margin-left: 290px;
+    font-size: 14px;
+    color: #001f3f;
+    font-weight: bold;
+  }
+  .login-container a {
+    color: #6a9ab0;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .left-Container {
+    background: #3a6d8c;
+    border-radius: 50px;
+    height: 500px;
+    width: 150px;
+    position: relative;
+    right: 650px;
+    z-index: 10;
+  }
+  .index-Container {
+    background: #ead8b1;
+    border-radius: 50px;
+    height: 600px;
+    width: 1300px;
+    position: absolute;
+  }
+  .floatImgWomanIndex {
+    float: left;
+    width: 200px;
+    height: 300px;
+    margin-left: -30px;
+    margin-top: 250px;
+    position: relative;
+    z-index: 10;
+  }
+  .floatImgAll{
+    float: left;
+    margin-top: 100px;
+    margin-left: 100px;
+  }
+  h3{
+    font-size: 100px;
+    padding-top: 300px;
+    padding-left: 550px;
+    color: #001F3F;
+  }

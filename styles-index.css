@@ -1,0 +1,213 @@
+/* ปรับตัวกลางทั้งหมด */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #001f3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.index-Container {
+    text-align: center;
+    background: #73a0b4;
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 120%;
+}
+
+/* กล่องสำหรับ city */
+.city-Container {
+    margin-bottom: 20px;
+    display: flex;           /* ใช้ Flexbox */
+    justify-content: center; /* จัดให้อยู่ตรงกลาง */
+    align-items: center;     /* จัดให้อยู่แนวเดียวกัน */
+    gap: 10px;               /* ระยะห่างระหว่าง #city และ img */
+}
+
+.city-Container #city {
+    font-size: 30px;
+    font-weight: bold;
+    color: #202020;
+}
+
+.city-Container img {
+    width: 50px;
+    height: 50px;
+}
+
+/* จัดกล่อง temperature และ humidity ให้อยู่ในบรรทัดเดียวกัน */
+.info-Container {
+    display: flex;           /* ใช้ Flexbox */
+    justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+    align-items: center;     /* จัดให้อยู่แนวเดียวกันในแนวตั้ง */
+    gap: 20px;               /* ระยะห่างระหว่าง temperature และ humidity */
+    margin-top: 20px;        /* ระยะห่างด้านบน */
+}
+
+/* ปรับขนาดกล่อง temperature */
+.temp-Container {
+    background: #519bc9;
+    border-radius: 20px;
+    padding: 20px 40px;
+    text-align: center;
+    width: 150px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ปรับขนาดกล่อง humidity */
+.Humidity-Container {
+    background: #68c3a3;
+    border-radius: 20px;
+    padding: 20px 40px;
+    text-align: center;
+    width: 150px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ไอคอนของความชื้น (humidity) */
+.Humidity-Container i {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* ไอคอนของอุณหภูมิ (temperature) */
+.temp-Container i {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+.search-Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #5a8599;
+    border-radius: 20px;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 92%;
+}
+
+.search-Container input[type="text"] {
+    flex: 1;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    outline: none;
+    margin-right: 10px;
+    background: #6f97aa;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-Container input::placeholder {
+    color: #ffffff;
+}
+
+.search-Container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #519bc9;
+    color: white;
+    font-size: 18px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.search-Container a:hover {
+    background: #3d81a6;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+/* จัดสไตล์หัวข้อหลัก */
+.main-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1b1b1b; /* สีข้อความ */
+}
+/* ทำให้ .index-Container มี position relative เพื่อใช้เป็นอ้างอิงในการวางตำแหน่งปุ่ม */
+.index-Container {
+    position: relative; /* เพื่อให้ปุ่มล็อคเอาท์วางตำแหน่งได้ภายใน .index-Container */
+    padding-bottom: 80px; /* ให้พื้นที่ด้านล่างเพื่อไม่ให้ปุ่มทับ */
+}
+
+/* ปุ่มล็อคเอาท์ */
+.logout-btn {
+    position: absolute; /* วางตำแหน่งภายใน .index-Container */
+    bottom: 20px; /* วางปุ่มให้ห่างจากขอบล่างของ .index-Container 20px */
+    left: 50%; /* วางปุ่มให้ตรงกลางแนวนอน */
+    transform: translateX(-50%); /* ช่วยให้ปุ่มอยู่ตรงกลางแนวนอน */
+    background-color: #e74c3c; /* สีพื้นหลังแดง */
+    color: white; /* สีตัวอักษร */
+    border: none; /* ไม่มีขอบ */
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็นมือชี้ */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logout-btn i {
+    font-size: 16px; /* ขนาดไอคอน */
+}
+
+.logout-btn:hover {
+    background-color: #c0392b; /* สีพื้นหลังเมื่อชี้ */
+}
+/* กล่องข้อมูลผู้ใช้ที่แยกจาก .index-Container */
+.user-profile-container {
+    position: fixed;
+    top: 20px;  /* ระยะห่างจากด้านบน */
+    left: 20px; /* ระยะห่างจากด้านซ้าย */
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-profile-icon {
+    font-size: 40px; /* ขนาดไอคอน */
+    color: #555; /* สีของไอคอน */
+    margin-right: 15px; /* ระยะห่างจากข้อความ */
+}
+
+.user-info {
+    font-size: 16px;
+    color: #333;
+}
+
+.user-info .user-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.user-info .user-email {
+    font-size: 14px;
+    color: #888;
+}
